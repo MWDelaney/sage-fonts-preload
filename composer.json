@@ -1,0 +1,21 @@
+{
+  "name": "mwdelaney/sage-fonts-preload",
+  "description": "Automatically preload fonts from the Sage mix manifest",
+  "keywords": ["wordpress", "sage", "fonts", "preload"],
+  "homepage": "https://github.com/MWDelaney/sage-fonts-preload",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Michael W. Delaney",
+      "email": "michael@michaeldelaney.me"
+    }
+  ],
+  "require": {
+    "php": ">=5.3.2",
+    "roots/acorn": "^1.1"
+  },
+  "minimum-stability": "dev",
+	"autoload": {
+    "files": ["sage-fonts-preload.php"]
+  }
+}
