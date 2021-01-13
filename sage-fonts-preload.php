@@ -18,11 +18,6 @@ add_filter('wp_head', function () {
     // Get the mix manifest contents
     $json = json_decode(file_get_contents(asset('mix-manifest.json')));
 
-    // If the json is empty, return gracefully;
-    if ($json->isEmpty()) {
-        return;
-    }
-
     // Echo link tags for each font
     echo collect(
         $json
