@@ -3,6 +3,10 @@ use Illuminate\Support\Str;
 
 use function Roots\asset;
 
+if (! function_exists('add_filter')) {
+    return;
+}
+
 add_filter('wp_head', function () {
     echo collect(
         json_decode(file_get_contents(asset('mix-manifest.json')))
