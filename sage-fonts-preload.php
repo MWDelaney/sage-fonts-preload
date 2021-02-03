@@ -9,10 +9,14 @@ if (! function_exists('add_filter')) {
 
 add_filter('wp_head', function () {
     echo collect(
-        json_decode(file_get_contents(asset('mix-manifest.json')))
+        json_decode(asset('mix-manifest.json')->contents())
     )->keys()->filter(function ($item) {
-        return Str::endsWith($item, ['.otf', '.eot', 'woff', 'woff2', 'ttf']);
+        return Str::endsWith($item, ['.otf', '.eot', '.woff', '.woff2', '.ttf']);
     })->map(function ($item) {
-        return sprintf('<link rel="preload" href="%s%s" as="font" crossorigin>', get_stylesheet_directory_uri() . '/dist', $item);
+        // Return asset uri without versioning query string
+        return sprintf(
+            '<link rel="preload" href="%s" as="font" crossorigin>',
+            substr(asset($item)->uri(), 0, strpos(asset($item)->uri(), '?id='))
+        );
     })->implode("\n");
 });
