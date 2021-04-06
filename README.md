@@ -6,5 +6,5 @@ Adds [preloading](https://developer.mozilla.org/en-US/docs/Web/HTML/Preloading_c
 To install, run the following in your Sage 10-based theme directory:
 
 ```
-composer require "mwdelaney/sage-fonts-preload".
+composer require "mwdelaney/sage-fonts-preload"
 ```
