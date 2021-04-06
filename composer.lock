@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "78a31aa3eb179f129e60d4ca69b99ae4",
+    "content-hash": "56380a7e389438265ec7071f7beef9e3",
     "packages": [
         {
             "name": "brick/math",
@@ -1486,6 +1486,11 @@
                 "sage",
                 "wordpress"
             ],
+            "support": {
+                "forum": "https://discourse.roots.io/",
+                "issues": "https://github.com/roots/acorn/issues",
+                "source": "https://github.com/roots/acorn/tree/master"
+            },
             "funding": [
                 {
                     "url": "https://github.com/roots",
@@ -3495,5 +3500,5 @@
         "php": ">=5.3.2"
     },
     "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.0.0"
 }
