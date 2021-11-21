@@ -15,8 +15,9 @@ add_filter('wp_head', function () {
     })->map(function ($item) {
         // Return asset uri without versioning query string
         return sprintf(
-            '<link rel="preload" href="%s" as="font" crossorigin>',
-            substr(asset($item)->uri(), 0, strpos(asset($item)->uri(), '?id='))
+            '<link rel="preload" href="%s" type="font/%s" as="font" crossorigin>',
+            substr(asset($item)->uri(), 0, strpos(asset($item)->uri(), '?id=')),
+            pathinfo($item, PATHINFO_EXTENSION)
         );
     })->implode("\n");
 });
